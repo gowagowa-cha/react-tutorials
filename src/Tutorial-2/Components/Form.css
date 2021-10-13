@@ -1,0 +1,22 @@
+.form-style {
+	display: table-caption;
+	margin: 50px;
+
+}
+
+input {
+	width: 300px;
+	height: 40px;
+	color: rgb(117 117 117);;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+button {
+	width: 111px;
+	height: 40px;
+	font-size: 20px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}

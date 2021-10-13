@@ -16,12 +16,11 @@ class ClassProfile extends React.Component {
 	}
 
 	theDate() {
+		const day = this.registeredAt.getDate();
+		const month = this.registeredAt.getMonth();
+		const year = this.registeredAt.getFullYear();
 
-			const day = this.registeredAt.getDate();
-			const month = this.registeredAt.getMonth();
-			const year = this.registeredAt.getFullYear();
-
-			return `${day} ${this.montoToStr(month)} ${year}`
+		return `${day} ${this.montoToStr(month)} ${year}`;
 	}
 
 	render() {
