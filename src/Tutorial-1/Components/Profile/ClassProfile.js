@@ -1,38 +1,29 @@
-import React from 'react';
-import './Profile.css';
+import React from "react";
+import "./Profile.css";
 
 class ClassProfile extends React.Component {
-	constructor({ name, registeredAt }) {
-		super();
-		this.name = name;
-		this.registeredAt = registeredAt;
-	}
-	montoToStr(num) {
-		return num > 12 || num < 1
-			? null
-			: 'январь,февраль,март,апрель,май,июнь,июль,август,сентября,октября,ноября,декабря'.split(
-					',',
-			  )[num - 1];
-	}
+  static defaultProps = {
+    name: "No Name",
+    registeredAt: new Date(),
+  };
 
-	theDate() {
-		const day = this.registeredAt.getDate();
-		const month = this.registeredAt.getMonth();
-		const year = this.registeredAt.getFullYear();
+  render() {
+    const { name, registeredAt } = this.props;
+		const [firstName] = name.split(' ')
+		const date = registeredAt.toLocaleDateString('ru-RU',{ 
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric',
+	})
+    return (
+      <div className="profile">
+        <div>
+          Привет, <b>{firstName}</b>!
+        </div>
+        <p>Дата регистрации: {date}</p>
+      </div>
+    );
+  }
 
-		return `${day} ${this.montoToStr(month)} ${year}`;
-	}
-
-	render() {
-		return (
-			<div className='profile'>
-				<div>
-					Привет, <b>{this.name}</b>!
-				</div>
-				<p>Дата регистрации: {this.theDate(this.registeredAt)}</p>
-			</div>
-		);
-	}
 }
-
 export default ClassProfile;
