@@ -6,10 +6,12 @@ function Form() {
   let password = "";
 
   function onChange(event) {
-    if (event.target.name === "email") {
-      email = event.target.value;
-    } else {
-      password = event.target.value;
+		const { name, value } = event.target
+    if (name === "email") {
+      email = value;
+    } 
+		if (name === 'password') {
+      password = value;
     }
   }
 
@@ -18,6 +20,7 @@ function Form() {
 
     if (email.trim() && password.trim()) {
       console.log(`E-Mail: ${email} Пароль: ${password}`);
+			email = password = ''
       event.target.reset();
     } else {
       alert("Заполните форму!");
@@ -29,7 +32,7 @@ function Form() {
       <input
         name="email"
         onChange={onChange}
-        type="text"
+        type="email"
         placeholder="E-Mail"
       />
       <input
