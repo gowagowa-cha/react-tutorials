@@ -23,26 +23,6 @@
       "email": "vasya@mail.ru",
       "createdAt": "Thu Oct 14 2021 13:41:01",
       "text": "Nani.."
-    },
-    {
-      "obj": {
-        "fullName": "Вася Пупкин",
-        "avatarUrl": "https://source.unsplash.com/50x50/?people&1",
-        "email": "pupkin@mail.com",
-        "createdAt": "Mon Nov 01 2021 01:42:17 GMT+0300 (Москва, стандартное время)",
-        "text": "testetstetstetstetste"
-      },
-      "id": 4
-    },
-    {
-      "obj": {
-        "fullName": "gtrsgg",
-        "avatarUrl": "https://source.unsplash.com/50x50/?people&1",
-        "email": "trgsrg",
-        "createdAt": "Mon Nov 01 2021 01:50:27 GMT+0300 (Москва, стандартное время)",
-        "text": "gtrsgsr"
-      },
-      "id": 5
     }
   ]
 }

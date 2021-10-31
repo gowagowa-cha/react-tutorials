@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import "./style.scss";
 
 import List from "@mui/material/List";
@@ -15,12 +14,6 @@ function App() {
   const [valueComent, setValueComent] = React.useState("");
   const [valueEmail, setValueEmail] = React.useState("");
 
-  React.useEffect(() => {
-    axios.get("http://localhost:3001/list").then(({ data }) => {
-      setState(data);
-    });
-  }, []);
-
   function BtnClick() {
     let obj = {
       fullName: valueName,
@@ -30,20 +23,23 @@ function App() {
       text: valueComent,
     };
     if (valueName && valueEmail && valueComent) {
-			setState([...state, obj]);
+      setState([...state, obj]);
     } else {
-			alert("Заполните форму");
+      alert("Заполните форму");
     }
-		// Не могу понять как правильно отправить данные на сервер
-		// и как правильно передавать данные obj
-		axios.post("http://localhost:3001/list", {
-			obj,
-		});
 
     setValueName("");
     setValueComent("");
     setValueEmail("");
   }
+
+  React.useEffect(() => {
+    localStorage.setItem("comments", JSON.stringify(valueComent));
+  }, [valueComent]);
+
+	React.useEffect(() => {
+		setValueComent(JSON.parse(localStorage.getItem('comments')))
+ }, [])
 
   return (
     <React.Fragment>
@@ -77,7 +73,7 @@ function App() {
       </div>
       <div className="app">
         <span className="app-span">Обратная связь:</span>
-        <form>
+        <form onSubmit={(e)=> e.preventDefault()}>
           <input
             type="text"
             placeholder="Имя"
