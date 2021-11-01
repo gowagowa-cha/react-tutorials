@@ -1,0 +1,28 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "fullName": "Gowa Gowa",
+      "avatarUrl": "https://source.unsplash.com/50x50/?people&1",
+      "email": "gowagowa@mail.com",
+      "createdAt": "Thu Oct 14 2021 13:41:01",
+      "text": "Anata no ken wa ka to onaji kurai tsuyoidezu"
+    },
+    {
+      "id": 2,
+      "fullName": "Bad Gay",
+      "avatarUrl": "https://source.unsplash.com/50x50/?people&2",
+      "email": "ara-ara@mail.com",
+      "createdAt": "Thu Oct 14 2021 13:41:01",
+      "text": "o mae wa shienderu"
+    },
+    {
+      "id": 3,
+      "fullName": "Kensiro",
+      "avatarUrl": "https://source.unsplash.com/50x50/?people&3",
+      "email": "vasya@mail.ru",
+      "createdAt": "Thu Oct 14 2021 13:41:01",
+      "text": "Nani.."
+    }
+  ]
+}

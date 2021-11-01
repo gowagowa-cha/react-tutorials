@@ -1,0 +1,48 @@
+.app {
+	outline: none;
+	width: 300px;
+	background: white;
+	border-radius: 3px;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 1px solid lightgray;
+
+
+	.app-span {
+		color: #332626;
+		font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    display: block;
+	}
+
+	button {
+		width: 100%;
+    background: #2196f3;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 6px 0px;
+		margin-top: 10px;
+	}
+	input {
+    width: 98%;
+		border-radius: 4px;
+    height: 35px;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+		outline: none;
+	}
+
+	.last-input {
+		height: 80px;
+	}
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #d3d3d34d;
+}
